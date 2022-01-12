@@ -31,9 +31,9 @@ async function addToCart() {
 
   const newTotalQuantity = responseData.newTotalItems
 
-  cartBadgeElements.forEach((badge) => {
-    badge.textContent = newTotalQuantity
-  })
+  for (const cartBadgeElement of cartBadgeElements) {
+    cartBadgeElement.textContent = newTotalQuantity
+  }
 }
 
 addToCartButtonElement.addEventListener("click", addToCart)
